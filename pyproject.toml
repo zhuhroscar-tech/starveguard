@@ -1,20 +1,20 @@
 [build-system]
-requires = ["setuptools>=68"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "starveguard"
-version = "0.1.0"
+version = "0.1.1"
 description = "Simulate and audit priority-queue scheduling policies for preemption starvation (the vLLM #41951 bug class)"
 readme = "README.md"
-license = { text = "MIT" }
+license = "MIT"
+license-files = ["LICENSE"]
 requires-python = ">=3.9"
 authors = [{ name = "zhuhroscar-tech" }]
 classifiers = [
     "Programming Language :: Python :: 3",
     "Operating System :: POSIX :: Linux",
     "Operating System :: MacOS",
-    "License :: OSI Approved :: MIT License",
 ]
 dependencies = []
 
