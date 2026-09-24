@@ -44,4 +44,4 @@ python -m pytest -q
 python -m pip uninstall starveguard
 ```
 
-[Releases](https://github.com/zhuhroscar-tech/starveguard/releases) · [MIT license](LICENSE)
+[Release history](CHANGELOG.md) · [Releases](https://github.com/zhuhroscar-tech/starveguard/releases) · [MIT license](LICENSE)

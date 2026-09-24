@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "starveguard"
-version = "0.1.1"
+version = "0.1.2"
 description = "Simulate and audit priority-queue scheduling policies for preemption starvation (the vLLM #41951 bug class)"
 readme = "README.md"
 license = "MIT"
