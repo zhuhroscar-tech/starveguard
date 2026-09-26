@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "starveguard"
-version = "0.1.2"
+version = "0.1.3"
 description = "Simulate and audit priority-queue scheduling policies for preemption starvation (the vLLM #41951 bug class)"
 readme = "README.md"
 license = "MIT"
@@ -17,6 +17,11 @@ classifiers = [
     "Operating System :: MacOS",
 ]
 dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/zhuhroscar-tech/starveguard"
+Issues = "https://github.com/zhuhroscar-tech/starveguard/issues"
+Changelog = "https://github.com/zhuhroscar-tech/starveguard/blob/main/CHANGELOG.md"
 
 [project.optional-dependencies]
 dev = ["pytest", "pytest-cov"]

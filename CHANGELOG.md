@@ -2,6 +2,12 @@
 
 All notable changes to `starveguard` are documented here.
 
+## v0.1.3 — 2026-09-26
+
+- Added package project URLs for homepage, issue tracker, and changelog metadata.
+- Made release-tag CI coverage explicit for `v*` tags.
+- Added repository-contract tests for package resource links and tag-triggered CI.
+
 ## v0.1.2 — 2026-09-24
 
 - Added release-history documentation and repository contract tests.

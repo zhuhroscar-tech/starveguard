@@ -7,4 +7,6 @@ __pycache__/
 venv/
 dist/
 dist_*/
+.wheel-smoke-*/
+metadata_*/
 build/

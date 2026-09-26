@@ -10,7 +10,7 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-CURRENT_VERSION = "0.1.2"
+CURRENT_VERSION = "0.1.3"
 
 
 def _read(relative: str) -> str:
@@ -71,6 +71,8 @@ def test_manifest_includes_release_and_ci_context():
 
 def test_ci_builds_release_artifacts_and_codeql_is_enabled():
     ci = _read(".github/workflows/ci.yml")
+    assert "tags:" in ci
+    assert "v*" in ci
     assert "python -m build" in ci
     assert "sha256sum * > SHA256SUMS.txt" in ci
     assert "actions/upload-artifact@v4" in ci
@@ -80,3 +82,14 @@ def test_ci_builds_release_artifacts_and_codeql_is_enabled():
     assert "github/codeql-action/init@v3" in codeql
     assert "github/codeql-action/analyze@v3" in codeql
     assert re.search(r"languages:\s*python", codeql)
+
+
+def test_package_metadata_links_project_resources():
+    pyproject = _read("pyproject.toml")
+    for expected in (
+        "[project.urls]",
+        'Homepage = "https://github.com/zhuhroscar-tech/starveguard"',
+        'Issues = "https://github.com/zhuhroscar-tech/starveguard/issues"',
+        'Changelog = "https://github.com/zhuhroscar-tech/starveguard/blob/main/CHANGELOG.md"',
+    ):
+        assert expected in pyproject
